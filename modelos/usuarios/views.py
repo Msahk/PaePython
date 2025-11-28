@@ -10,7 +10,6 @@ from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from django.db import IntegrityError, transaction
 from django.core.paginator import Paginator
-import pandas as pd
 import json
 import os
 from reportlab.pdfgen import canvas
@@ -215,8 +214,7 @@ def migrar_usuarios(request):
                 messages.error(request, 'El archivo debe ser un Excel (.xlsx o .xls)')
                 return render(request, 'usuarios/migrar.html')
             
-            # Leer Excel
-            df = pd.read_excel(excel_file)
+            
             
             # Validar columnas requeridas
             columnas_requeridas = ['documento', 'nombres', 'apellidos', 'telefono', 'direccion', 'correo', 'rol', 'password']
