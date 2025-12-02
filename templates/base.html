@@ -39,6 +39,7 @@
 </head>
 <body>
     <!-- Toggle tema global (visible siempre) -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema"><span class="icon">☀️</span></button>
     {% if request.session.usuario_id %}
         <!-- Incluir navbar solo si está autenticado -->
         {% include 'components/navbar.html' %}

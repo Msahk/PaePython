@@ -829,10 +829,6 @@ tbody td {
     font-size: 1.1rem;
 }
 
-body.dark-mode .instrucciones li {
-    color: var(--light-color);
-}
-
 /* === INFORMACIÓN PANEL === */
 .info-panel {
     background: var(--light-color);
